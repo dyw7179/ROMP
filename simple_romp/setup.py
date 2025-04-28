@@ -27,7 +27,7 @@ setuptools.setup(
         'typing-extensions>=4.1',
         'scipy',
         'lapx'],
-    install_requires=requireds,
+    install_requires=requireds + ['PyQt5'],
     description="ROMP [ICCV21], BEV [CVPR22], TRACE [CVPR23]",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -77,6 +77,7 @@ setuptools.setup(
             "trace2=trace2.main:main",
             "romp.prepare_smpl=romp.pack_smpl_info:main",
             "bev.prepare_smil=bev.pack_smil_info:main",
+            "romp-gui=tools.gui.romp_gui:main",
         ],
     },
 )

@@ -1,0 +1,13 @@
+python3.10 -m venv romp-env-py310
+.\romp-env-py310\Scripts\Activate.ps1
+
+
+# 4. 설치
+python -m pip install --upgrade pip
+pip install --upgrade pip
+pip install -r requirements.txt
+
+
+pip install setuptools wheel --upgrade
+
+pip install git+https://github.com/mattloper/chumpy.git --no-use-pep517

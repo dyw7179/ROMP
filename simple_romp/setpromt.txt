@@ -1,0 +1,32 @@
+# Python 3.8 전체 경로로 가상환경 생성
+C:\Users\ADmiN\AppData\Local\Programs\Python\Python38\python.exe -m venv romp_env_38
+
+
+# 활성화
+romp_env_38\Scripts\activate
+
+
+pip install --upgrade setuptools numpy cython lapx
+pip install simple_romp==1.1.4
+
+
+# 모델 준비 후 프로젝트 디렉터리에 넣고 아래 명령어 실행
+romp.prepare_smpl -source_dir=C:\Users\ADmiN\Documents\GitHub\ROMP\simple_romp\smpl_model_data
+
+pip uninstall numpy
+pip install numpy==1.22.0
+
+
+# 프로젝트 디렉터리로 이동
+cd simple_romp
+
+# 가상환경 실행
+romp_env_38\Scripts\activate
+
+#실행 명령어 (CMD)
+romp --mode=image --calc_smpl --render_mesh -i="렌더링할 이미지 경로" -o="결과물 저장 경로"
+
+or
+
+#실행 명령어 (GUI)
+python tools/romp_gui.py
